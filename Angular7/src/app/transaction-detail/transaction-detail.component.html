@@ -1,0 +1,65 @@
+<div class="jumbotron py-3">
+
+    <h1 class="display-4 text-center">
+        Transaction Details
+    </h1>
+</div>
+<table>
+    <!-- <td>
+
+    </td> -->
+    
+    <td class='col-md-4'>
+        <div>
+            <div style="background-color:cornsilk;"></div>
+           
+          <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+           <input  type="hidden" name="TransactionId" [value]="service.formData.TransactionId" >
+            <div class="form-group">
+              <!--i [class.green-icon]="UserId.valid" [class.green-icon]="UserId.invalid && UserId.invalid.touched" ></i-->
+              <label >User Id</label>
+              <input name="UserId" #UserId="ngModel" [(ngModel)]="service.formData.UserId" class="form-control" placeholder="Enter UserId" required>
+            </div>
+            <div class="form-group">
+              <label >Sender BankName</label>
+              <!--i [class.green-icon]="SenderBankName.valid" [class.green-icon]="SenderBankName.invalid && SenderBankName.invalid.touched" ></i-->
+              <input name="SenderBankName" #SenderBankName="ngModel" [(ngModel)]="service.formData.SenderBankName" class="form-control" placeholder="Enter SenderbankName" required>
+            </div>
+           
+            <div class="form-group">
+              <!--i [class.green-icon]="SenderAccno.valid" [class.green-icon]="SenderAccno.invalid && SenderAccno.invalid.touched" ></i-->
+              <label >Sender Accno</label>
+              <input  name="SenderAccno" #SenderAccno="ngModel" [(ngModel)]="service.formData.SenderAccno" class="form-control" placeholder="Sender Accno" required minlength="11" maxlength="14">
+            </div>
+            <div class="form-group">
+              <!--i [class.green-icon]="RecipientName.valid" [class.green-icon]="RecipientName.invalid && RecipientName.invalid.touched" ></i-->
+              <label >Recipient Name</label>
+              <input name="RecipientName" #RecipientName="ngModel" [(ngModel)]="service.formData.RecipientName" class="form-control" placeholder=" Enter Recipientname" required>
+            </div>
+            <div class="form-group">
+              <!--i [class.green-icon]="RecipientAccNo.valid" [class.green-icon]="RecipientAccNo.invalid && RecipientAccNo.invalid.touched" ></i-->
+              <label >Recipient AccNo</label>
+              <input name="RecipientAccNo" #RecipientAccNo="ngModel" [(ngModel)]="service.formData.RecipientAccNo" class="form-control" placeholder="Enter RecipientAccNo" required minlength="11" maxlength="14">
+            </div>
+            <div class="form-group">
+              
+              <label >Transaction Date</label>
+              <input name="TransactionDate" #TransactionDate="ngModel" [(ngModel)]="service.formData.TransactionDate" type="date" class="form-control" placeholder="Transaction Date" required>
+            </div>
+            <div class="form-group">
+              <!--i [class.green-icon]="TransactionFee.valid" [class.green-icon]="TransactionFee.invalid && TransactionFee.invalid.touched" ></i-->
+              <label>Transaction Fee</label>
+              <input name="TransactionFee" #TransactionFee="ngModel" [(ngModel)]="service.formData.TransactionFee" class="form-control" placeholder="Enter TransactionFee" required>
+            </div><br>
+            <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Submit</button>
+            </div>
+          </form>
+          </div>
+    </td>
+    <!-- <td>
+
+    </td> -->
+
+</table>
+

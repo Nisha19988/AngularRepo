@@ -1,0 +1,64 @@
+<div>
+ 
+    <div style="background-color: #7ee4c0; height: 750px;">
+     
+    <div style="text-align: center;">
+     
+    <h1>Transaction Page</h1>
+    </div>
+     
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+    <div style="text-align: center;margin-left: 30%;margin-right: 30%;">
+    <div class="form-group">
+     
+    <input type="hidden" style="outline:0;border-width: 0 0 2px;border-color: blue;" class="form-control form-control-lg" placeholder="transactionid"
+    name="transaction_Id" />
+    </div>
+    <div class="form-group">
+    <label style="margin-right: 89%;">User ID</label>
+    <input style="outline:0;border-width: 0 0 2px;border-color: blue;"class="form-control form-control-lg"placeholder="userid"
+    name="user_Id" formControlName="user_Id" type="number"  minlength="1"  maxlength="11" required/>
+    </div>
+    <div class="form-group">
+        <label style="margin-right: 83%;">Account No</label>
+        <input style="outline:0;border-width: 0 0 2px;border-color: blue;"class="form-control form-control-lg"placeholder="11 Digit AccNo"
+        name="sender_AccNo" type="number" formControlName="sender_AccNo" required maxlength="11" minlength="11"/>
+        </div>
+     
+    <div class="form-group">
+    <label style="margin-right: 78%; ">Bank Name</label>
+    <input style="outline:0;border-width: 0 0 2px;border-color: blue;"class="form-control form-control-lg"placeholder="Sender BankName"
+    name="sender_BankName" type="text" formControlName="sender_BankName" required maxlength="3" minlength="11"/>
+    </div>
+     
+    <!-- <div class="form-group">
+    <label style="margin-right: 80%;">Recipient Name</label>
+    <input style="outline:0;border-width: 0 0 2px;border-color: blue;"class="form-control form-control-lg"placeholder="Recipient Name"
+    name="recipient_Name" formControlName="recipient_Name" required/>
+    </div>
+    <div class="form-group">
+    <label style="margin-right: 80%;">Recipient AccNo</label>
+    <input style="outline:0;border-width: 0 0 2px;border-color: blue;"class="form-control form-control-lg"placeholder="11 Digit AccNo"
+    name="recipient_AccNo" formControlName="recipient_AccNo" required maxlength="11"minlength="11"/>
+    </div> -->
+    <div class="form-group">
+    <label style="margin-right: 80%;">Transaction Date</label>
+    <input type="date"style="outline:0;border-width: 0 0 2px;border-color: blue;"class="form-control form-control-lg"placeholder="DD/MM/YYYY"
+    name="transaction_Date" formControlName="transaction_Date"/>
+    </div>
+    <div class="form-group">
+    <label style="margin-right: 80%;">Enter Password</label>
+    <input style="outline:0;border-width: 0 0 2px;border-color: blue;"class="form-control form-control-lg"placeholder="password"
+    name="password" type="password" formControlName="password"  maxlength="5" minlength="11" required/>
+    </div><br>
+     
+    <div style="text-align: center;"class="form-group">
+    <button class="btn btn-info btn-lg btn block" type="submit" >Save</button>
+    </div>
+     
+    </div>
+     
+    </div>
+    </form>
+    </div>

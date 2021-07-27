@@ -1,0 +1,34 @@
+<div class="jumbotron">
+  <h1 class="display-6 text-center" >Currency Converter</h1>
+  </div>
+  <form [formGroup]="convertconverterForm" autocomplete="off" (submit)="onSubmit(convertconverterForm.value)">
+  <input type="hidden" name="Id" [value]="service.formData.Id">
+      <div class="form-group">
+              <label>From Currency:</label><br>
+                <!-- <input name="fromCurrency" #fromCurrency="ngModel" [(ngModel)]="service.formData.fromCurrency" class="form-control" placeholder="Enter Currency Name" required appOnlyCharacters > -->
+                <input name="fromCurrency" formControlName="fromCurrency" class="form-control" placeholder="Enter Currency Name" required appOnlyCharacters>
+               
+       </div>
+       <div class="form-group">
+          <label >To Currency:</label><br>
+          <input name="toCurrency" formControlName="toCurrency"  class="form-control" placeholder="Enter Currency Name" required appOnlyCharacters>
+       </div><br>
+       
+       <div class="form-group">
+         <label>Enter Amount</label>
+         <input name="amount" formControlName="amount" class="form-control" placeholder="Enter Amount" required appOnlyNumbers>
+       </div>
+       <div class="form-group">
+          <label>Converted Amount</label>
+          <!-- <input name="convertedAmounted" formControlName="convertedAmounted" [(ngModel)]="selectedValue?.convertedAmounted" class="form-control" placeholder="Converted Amount will display here" readonly> -->
+          <input name="convertedAmounted" formControlName="convertedAmounted" class="form-control" placeholder="Converted Amount will display here" readonly>
+          
+          <!-- <input name="convertedAmounted" #convertedAmounted="ngModel" [(ngModel)]="service.formData.convertedAmounted" class="form-control" placeholder="Converted Amount will display here" readonly> -->
+        </div>
+        <div *ngIf="!selectedValue" class="form-group">
+          <button class="btn btn-success btn-lg btn-block" type="submit">Convert Amount</button>
+          </div>
+       <div *ngIf="selectedValue" class="form-group">
+       <button class="btn btn-success btn-lg btn-block" type="button" (click)="onSubmit2()"> Save & Proceed to Payment Page</button>
+       </div>
+     </form>

@@ -1,0 +1,115 @@
+<div class="jumbotron py-3">
+ 
+    <h1 class="display-4 text-center">
+       Generate Report
+    </h1>
+</div>
+ 
+<button  type="button" class="btn btn-warning" (click)="download()"> Download Pdf</button>
+ 
+<div class="col-md-16">
+    <table class="table" id="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Transaction Id</th>
+                <th>User Id </th>
+                <th>Sender BankName</th>
+                <th>Sender Account No</th>
+                <th>Recipient Name</th>
+                <th>Recipient Account No</th>
+                <th>Date</th>                
+                <th>From</th>
+                <th>To</th>
+                <th>Total Amount</th>
+                <th>Transaction Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>UR1</td>
+                <td>BOI</td>
+                <td>BOI123456</td>
+                <td>BOB</td>
+                <td>UNI123456</td>
+                <td>16-02-2021</td>
+                <td>INR</td>
+                <td>USD</td>
+                <td>14560</td>
+                <td>13.23</td>
+            <tr>
+            <tr>
+                <td>2</td>
+                <td>UR2</td>
+                <td>BOI</td>
+                <td>BOI123457</td>
+                <td>Ram</td>
+                <td>UNI123457</td>
+                <td>17-02-2021</td>
+                <td>YEN</td>
+                <td>USD</td>
+                <td>115600</td>
+                <td>18.23</td>
+            <tr>
+                <tr>
+                    <td>3</td>
+                    <td>UR3</td>
+                    <td>UNI</td>
+                    <td>UNI123455</td>
+                    <td>Tushar</td>
+                    <td>UNI123457</td>
+                    <td>17-02-2021</td>
+                    <td>USD</td>
+                    <td>SKW</td>
+                    <td>1156</td>
+                    <td>11.23</td>
+                <tr>
+ 
+                    <tr>
+                        <td>4</td>
+                        <td>UR4</td>
+                        <td>UNI</td>
+                        <td>UNI123333</td>
+                        <td>Abhishek</td>
+                        <td>ICIC12345</td>
+                        <td>18-02-2021</td>
+                        <td>INR</td>
+                        <td>SKW</td>
+                        <td>1100</td>
+                        <td>11.23</td>
+                    <tr>
+                        <tr>
+                            <td>5</td>
+                            <td>UR5</td>
+                            <td>INR</td>
+                            <td>INR123333</td>
+                            <td>Jack</td>
+                            <td>KOT12345</td>
+                            <td>19-02-2021</td>
+                            <td>USD</td>
+                            <td>INR</td>
+                            <td>11000000</td>
+                            <td>16.23</td>
+                        <tr>   
+ 
+                            
+                            <!-- <tr  *ngFor="let obj of service.list1">
+                                <td>{{obj.transactionId}}</td>
+                                <td>{{obj.userId}}</td>
+                                <td>{{obj.sendersBankname}}</td>
+                                <td>{{obj.sendersAccno}}</td>
+                                <td>{{obj.recipientName}}</td>
+                                <td>{{obj.recipientAccno}}</td>
+                                <td>{{obj.transactionDate}}</td>
+                                <td>{{obj.fromCurrency}}</td>
+                                <td>{{obj.toCurrency}}</td>
+                                <td>{{obj.totalAmount}}</td>
+                                <td>{{obj.transactionFee}}</td>
+                
+                            </tr> -->
+
+
+ 
+        </tbody>
+    </table>
+</div>

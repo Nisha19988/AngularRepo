@@ -1,0 +1,41 @@
+<div class="jumbotron py-3">
+
+    <h1 class="display-4 text-center">
+        Managing Currency
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-currency-update-form></app-currency-update-form>
+    </div>
+    <div class="col-md-6">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Admin Id</th>
+                    <th>Currency Name </th>
+                    <th>Currency Rate</th>
+                    <th>Currency Date</th>
+                    <th>Country Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let cu of service.list">
+                    <td (click)="populateForm(cu)">{{cu.adminId}}</td>
+                    <td (click)="populateForm(cu)">{{cu.currencyName}}</td>
+                    <td (click)="populateForm(cu)">{{cu.currencyRate}}</td>
+                    <td (click)="populateForm(cu)">{{cu.currencyDate}}</td>
+                    <td (click)="populateForm(cu)">{{cu.countryName}}</td>
+                    <td>
+                        <i class="far fa-trash-alt fa-lg text-danger"  (click)="onDelete(cu.currencyId)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+
+

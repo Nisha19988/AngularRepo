@@ -1,0 +1,113 @@
+<div class="jumbotron py-3">
+ 
+    <h1 class="display-4 text-center">
+       Transaction Details
+    </h1>
+</div>
+ 
+<button  type="button" class="btn btn-warning" (click)="download()"> Download Pdf</button>
+ <br>
+<div class="col-md-16">
+    <table class="table" id="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Transaction Id</th>
+                <th>User Id </th>
+                <th>Sender BankName</th>
+                <th>Txn Date</th>
+                <th>Currency Details</th>
+                <th>Country</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" style="outline:0;border-width: 0 0 2px;border-color: blue;"
+                    class="form-control form-control-lg"  placeholder="1" name="transaction_Id" readonly/></td>
+                <td><input style="outline:0;border-width: 0 0 2px;border-color: blue;color: black;" class="form-control form-control-lg"
+                    placeholder="" name="user_Id" value="{{getdata_?.user_Id}}" readonly /></td>
+                <td><input style="outline:0;border-width: 0 0 2px;border-color: blue;color: black;" class="form-control form-control-lg"
+                    placeholder="" name="sender_BankName" value="HDFC" readonly/></td>
+                <td> <input style="outline:0;border-width: 0 0 2px;border-color: blue;color: black;" class="form-control form-control-lg"
+                    placeholder="" type="date" name="sender_AccNo" value="{{getdata_?.transaction_Date}}" readonly/></td>
+                <td><input style="outline:0;border-width: 0 0 2px;border-color: blue;color: black;" class="form-control form-control-lg"
+                    placeholder="" name="recipient_Name" value="INR" readonly/></td>
+                <td> <input style="outline:0;border-width: 0 0 2px;border-color: blue;color: black;" class="form-control form-control-lg"
+                    placeholder="" name="recipient_AccNo" value="India" readonly/></td>
+
+            <tr>
+            <!-- <tr>
+                <td>2</td>
+                <td>UR2</td>
+                <td>BOI</td>
+                <td>BOI123457</td>
+                <td>Ram</td>
+                <td>UNI123457</td>
+                <td>17-02-2021</td>
+                <td>YEN</td>
+                <td>USD</td>
+                <td>115600</td>
+                <td>18.23</td>
+            <tr>
+                <tr>
+                    <td>3</td>
+                    <td>UR3</td>
+                    <td>UNI</td>
+                    <td>UNI123455</td>
+                    <td>Tushar</td>
+                    <td>UNI123457</td>
+                    <td>17-02-2021</td>
+                    <td>USD</td>
+                    <td>SKW</td>
+                    <td>1156</td>
+                    <td>11.23</td>
+                <tr>
+ 
+                    <tr>
+                        <td>4</td>
+                        <td>UR4</td>
+                        <td>UNI</td>
+                        <td>UNI123333</td>
+                        <td>Abhishek</td>
+                        <td>ICIC12345</td>
+                        <td>18-02-2021</td>
+                        <td>INR</td>
+                        <td>SKW</td>
+                        <td>1100</td>
+                        <td>11.23</td>
+                    <tr>
+                        <tr>
+                            <td>5</td>
+                            <td>UR5</td>
+                            <td>INR</td>
+                            <td>INR123333</td>
+                            <td>Jack</td>
+                            <td>KOT12345</td>
+                            <td>19-02-2021</td>
+                            <td>USD</td>
+                            <td>INR</td>
+                            <td>11000000</td>
+                            <td>16.23</td>
+                        <tr>    -->
+ 
+                            
+                            <!-- <tr  *ngFor="let obj of service.list1">
+                                <td>{{obj.transactionId}}</td>
+                                <td>{{obj.userId}}</td>
+                                <td>{{obj.sendersBankname}}</td>
+                                <td>{{obj.sendersAccno}}</td>
+                                <td>{{obj.recipientName}}</td>
+                                <td>{{obj.recipientAccno}}</td>
+                                <td>{{obj.transactionDate}}</td>
+                                <td>{{obj.fromCurrency}}</td>
+                                <td>{{obj.toCurrency}}</td>
+                                <td>{{obj.totalAmount}}</td>
+                                <td>{{obj.transactionFee}}</td>
+                
+                            </tr> -->
+
+
+ 
+        </tbody>
+    </table>
+</div>
